@@ -1,0 +1,56 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+.env
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# API Secrets and sensitive data
+application-dev.properties
+application-prod.properties
+.env
+.env.local
+.env.*.local
+
+# Cloudinary
+cloudinary-config.json
+
+# Database
+*.db
+*.sqlite
+
+# Logs
+*.log
+logs/
+
+# Build
+target/
+build/

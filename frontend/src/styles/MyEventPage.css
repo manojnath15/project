@@ -1,0 +1,375 @@
+/* MyEventsPage.css */
+.my-events-container {
+  max-width: 100%;
+  margin: 0 ;
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.my-events-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.my-events-header h1 {
+  color: #3a5a73;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.my-events-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.create-event-btn {
+  background: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.create-event-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.no-events {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.no-events-content h3 {
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.no-events-content p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.create-first-event-btn {
+  background: #3a5a73;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.create-first-event-btn:hover {
+  background: #2c3e50;
+  transform: translateY(-2px);
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #e9ecef;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.event-type-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+}
+
+.event-content {
+  padding: 1.5rem;
+}
+
+.event-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.event-date {
+  color: #3a5a73;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.event-description {
+  color: #6c757d;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.event-location {
+  color: #495057;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.event-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.stat {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.event-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-event-btn {
+  background: #3a5a73;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  flex: 2;
+  text-align: center;
+}
+
+.view-event-btn:hover {
+  background: #2c3e50;
+}
+
+.add-gift-btn {
+  background: #28a745;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.add-gift-btn:hover {
+  background: #218838;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .my-events-container {
+    padding: 1rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .my-events-header h1 {
+    font-size: 2rem;
+  }
+
+  .event-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-events-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .event-content {
+    padding: 1rem;
+  }
+
+  .event-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* RSVP Stats and Grid */
+.rsvp-stats {
+ margin: 1.25rem 0 1rem 0;
+ background: #f3f7fb;
+ border-radius: 8px;
+ padding: 1rem 0.75rem;
+ box-shadow: 0 2px 10px rgba(58,90,115,0.04);
+}
+
+.rsvp-stats h4 {
+ color: #3a5a73;
+ font-size: 1rem;
+ font-weight: 600;
+ margin-bottom: 0.6rem;
+ letter-spacing: 0.25px;
+}
+
+.stats-grid {
+ display: flex;
+ gap: 1.5rem;
+ justify-content: flex-start;
+}
+
+.stat-item {
+ text-align: center;
+ min-width: 72px;
+ padding: 0.5rem 0.25rem;
+ border-radius: 7px;
+ background: #ffffffab;
+ box-shadow: 0 1px 2px rgba(90,90,130,0.07);
+ font-size: 0.98rem;
+ font-weight: 600;
+}
+
+.stat-number {
+ display: block;
+ font-size: 1.35rem;
+ font-weight: 800;
+ margin-bottom: 0.15rem;
+ color: #1c243b;
+}
+
+.stat-label {
+ font-size: 0.85rem;
+ color: #6c757d;
+ font-weight: 500;
+ letter-spacing: 0.03em;
+}
+
+.stat-item.attending { background: #e1fbe7; }
+.stat-item.declined  { background: #ffeaea; }
+.stat-item.pending   { background: #fffbe6; }
+
+.stat-item.attending .stat-number { color: #28a745; }
+.stat-item.declined  .stat-number { color: #ff6b6b; }
+.stat-item.pending   .stat-number { color: #ffc107; }
+
+.loading-stats {
+ margin: 0.5rem 0 0.8rem 0;
+ color: #6c757d;
+ font-size: 0.95rem;
+}
+
+/* Event Key Display & Copy Button */
+.event-key {
+ margin: 1rem 0 1.5rem;
+ display: flex;
+ align-items: center;
+ gap: 0.6rem;
+ font-size: 1rem;
+}
+
+.event-key code {
+ background: #f7f9fa;
+ color: #3a5a73;
+ padding: 0.17em 0.7em;
+ border-radius: 6px;
+ font-size: 0.99em;
+ font-family: 'JetBrains Mono', 'Consolas', 'Menlo', monospace;
+ margin: 0 0.3em 0 0;
+ user-select: all;
+}
+
+.copy-key-btn {
+ background: none;
+ border: none;
+ font-size: 1.2em;
+ cursor: pointer;
+ padding: 0 0.25em;
+ color: #3a5a73;
+ transition: color 0.2s;
+}
+
+.copy-key-btn:hover {
+ color: #218838;
+}
+
+/* Updated Dashboard button */
+.dashboard-btn {
+ background: #0074d9;
+ color: #fff;
+ padding: 0.66rem 1.1rem;
+ border-radius: 6px;
+ text-decoration: none;
+ font-weight: 600;
+ font-size: 0.82rem;
+ transition: background 0.2s;
+ text-align: center;
+}
+
+.dashboard-btn:hover {
+ background: #003e72;
+}
+
+/* Emphasize event actions on small screens */
+@media (max-width: 650px) {
+ .event-actions {
+  flex-direction: column;
+  gap: 0.38rem;
+ }
+ .dashboard-btn,
+ .view-event-btn {
+  width: 100%;
+  min-width: 0;
+ }
+}
+
+/* Accessibility: better focus state for buttons/links */
+.create-event-btn:focus,
+.create-first-event-btn:focus,
+.view-event-btn:focus,
+.add-gift-btn:focus,
+.dashboard-btn:focus,
+.copy-key-btn:focus {
+ outline: 2px solid #0074d9;
+ outline-offset: 2px;
+}
